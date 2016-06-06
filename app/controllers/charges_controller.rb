@@ -12,12 +12,12 @@ class ChargesController < ApplicationController
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => params[:stripeAmount],
-      :description => 'Newgame.se Stripe customer',
+      :description => 'Hexis.nu Stripe customer',
       :currency    => 'sek'
     )
     current_user.has_paid = true
     current_user.save
-    redirect_to "/", notice: "Välkommen till New Game!"
+    redirect_to "/", notice: "Välkommen till Hexis!"
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
