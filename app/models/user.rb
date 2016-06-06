@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
-  after_create :create_mailchimp_subs
   include Gravtastic
   gravtastic
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable,
     :recoverable, :rememberable, :validatable, :trackable
   validates :username, presence: true, uniqueness: true
   validates :first_name, :surname, :email,  :address, :postal_address,
@@ -51,10 +50,5 @@ class User < ActiveRecord::Base
         errors.add(:social_security_number, "Personnummer är fel")
       end
     end
-  end
-
-  def create_mailchimp_subs
-    gibbon = Gibbon::Request.new()
-    gibbon.lists("7d35e1f26f").members(Digest::MD5.hexdigest(self.email)).upsert(body: {email_address: self.email, status: "subscribed", merge_fields: {FNAME: self.first_name, LNAME: self.surname}})
   end
 end
