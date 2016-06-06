@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= yield(:title).empty? ? "New Game" : yield(:title) %></title>
-  <link rel="shortcut icon" href="<%= asset_path('NG_logo.png')%>">
+  <link rel="shortcut icon" href="<%= asset_path('hexis_logo.png')%>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag params[:controller]%>
   <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
@@ -26,7 +26,7 @@
       </div>
 
       <a class="hidden-xs hidden-sm navbar-brand brand-logo" href="/" data-no-turbolink>
-        <%= image_tag("NG_logo_brand.png") %>
+        <%= image_tag("hexis_logo_brand.png") %>
       </a>
 
       <div id="navbar" class="collapse navbar-collapse" data-no-turbolink>

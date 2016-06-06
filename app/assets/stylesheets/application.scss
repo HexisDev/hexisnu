@@ -1,6 +1,7 @@
-$brand-primary: #7d26cd;
-$navbar-default-link-hover-color: #7d26cd;
-$navbar-default-link-active-color: #7d26cd;
+$brand-primary: #0ca460; //grön
+//$brand-primary: #14a2d7; //blå
+$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-active-color: $brand-primary;
 $grid-float-breakpoint: 1000px;
 
 $body-bg: #ffffff;
