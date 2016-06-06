@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield(:title).empty? ? "New Game" : yield(:title) %></title>
+  <title><%= yield(:title).empty? ? "Hexis" : yield(:title) %></title>
   <link rel="shortcut icon" href="<%= asset_path('hexis_logo.png')%>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag params[:controller]%>
@@ -22,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to 'New Game', "/", class: "visible-xs visible-sm navbar-brand", 'data-no-turbolink'=> true %>
+        <%= link_to 'Hexis', "/", class: "visible-xs visible-sm navbar-brand", 'data-no-turbolink'=> true %>
       </div>
 
       <a class="hidden-xs hidden-sm navbar-brand brand-logo" href="/" data-no-turbolink>
