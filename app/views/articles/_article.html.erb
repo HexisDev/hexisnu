@@ -1,4 +1,4 @@
-<div class="pad-div", style="background: url(<%= article.image_url.to_s %>) no-repeat center center fixed"></div>
+<div class="pad-div", style="background: url(<%= article.image.file.nil? ? asset_path('bgs/defaultnews.png')  : article.image_url.to_s %>) no-repeat center center fixed"></div>
 
 <div class="pad-section title">
 	<div class="row">
