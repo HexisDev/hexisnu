@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  game: MyString
+  team_size: 1
+  developer: MyString
+  image: MyString
+  rules: MyText
+
+two:
+  name: MyString
+  description: MyText
+  game: MyString
+  team_size: 1
+  developer: MyString
+  image: MyString
+  rules: MyText

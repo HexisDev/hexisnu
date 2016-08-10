@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :charges
 
+  resources :tournaments
+
   resources :articles do
     resources :comments
   end

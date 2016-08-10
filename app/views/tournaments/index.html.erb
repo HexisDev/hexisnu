@@ -1,0 +1,24 @@
+<% content_for :title do 'Turneringar' end %>
+
+<div class="pad-div", style="background: url(<%=asset_path('bgs/defaultnews.png') %>) no-repeat center center fixed"></div>
+
+<div class="pad-section title">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+      <div class="text-center">
+        <h1>Turneringar</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pad-section">
+  <div class="row">
+  	<p> hejsan </p>
+  </div>
+</div>
+
+
+<% @tournaments.order(name: :desc).each do |tournament| %>
+	<%= render tournament %>
+<% end %>
