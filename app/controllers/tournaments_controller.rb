@@ -25,6 +25,16 @@ class TournamentsController < ApplicationController
 		@tournament = Tournament.find(params[:id])
 	end
 
+	def update
+		@tournament = Tournament.find(params[:id])
+
+		if @tournament.update(tournament_params)
+			redirect_to @tournament
+		else
+			render 'new'
+		end
+	end
+
 	private
 
 	def tournament_params
