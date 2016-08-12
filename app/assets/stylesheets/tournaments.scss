@@ -12,18 +12,34 @@
 	padding: 0;
 }
 
-.tourn-pad-div {
-	height: 0;
-}
-
 .tourn-img {
 	padding-right: 0;
 	padding-left: 0;
 }
 
 .tourn-row {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	float: none;
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+.tourn-btn > .btn {
+	border: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;	
+	font-weight: bold;
+}
+
+
+.tourn-btn > .btn-primary:hover {
+	background-color: $brand-primary;
+	cursor: default;
+}
+
+.tourn-btn > .btn-primary {
+	opacity: 1;
 }
 
 .tourn-btn {
