@@ -23,12 +23,15 @@ $(document).ready(function(){
  setTimeout(function(){
    $('.alert').remove();
  }, 20000);
+ 
  $(document).click(function(){
    $('.alert').remove();
  });
+ 
  setTimeout(function(){
    $('.notice').remove();
  }, 5000);
+ 
  $(document).click(function(){
    $('.notice').remove();
  });

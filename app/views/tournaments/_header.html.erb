@@ -2,10 +2,10 @@
 
 <div class="pad-div", style="background: url(<%=asset_path('bgs/1.jpg') %>) no-repeat center center fixed">
 	<div class="row tourn-row">
-		<div class="col-sm-10 col-sm-offset-1">
+		<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
 		  <% @tournaments.order(short_name: :asc).each do |tournament| %>
 		  	<% if params[:slug] != tournament.slug %>
-					<a href="<%= tournament_path(tournament) %>" class="tourn-btn">
+					<a href="<%= tournament_path(tournament) %>" class="tourn-btn" data-no-turbolink>
 				<% else %>
 					<a class="tourn-btn">
 				<% end %>
