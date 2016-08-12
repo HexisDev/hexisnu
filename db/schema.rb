@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812191907) do
+ActiveRecord::Schema.define(version: 20160812213539) do
 
   create_table "about", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -114,8 +114,10 @@ ActiveRecord::Schema.define(version: 20160812191907) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.string   "slug",        limit: 255
+    t.string   "short_name",  limit: 255
   end
 
+  add_index "tournaments", ["short_name"], name: "index_tournaments_on_short_name", unique: true, using: :btree
   add_index "tournaments", ["slug"], name: "index_tournaments_on_slug", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
