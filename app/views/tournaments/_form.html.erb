@@ -1,5 +1,10 @@
 <div class="create-content">
   <div class="col-xs-6 col-xs-offset-3">
+    <% if @tournament.errors.any? %>
+      <% @tournament.errors.full_messages.each do |error| %>
+        <b><%= error %></b>
+      <% end %>
+    <% end %>
     <%= simple_form_for(@tournament, html: { class: 'form-horizontal' }) do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>

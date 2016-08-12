@@ -1,3 +1,31 @@
 // Place all the styles related to the Tournaments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "application";
+
+.pad-div {
+  height: 30em;
+}
+
+.tourn-pad-section {
+	padding: 0;
+}
+
+.tourn-pad-div {
+	height: 0;
+}
+
+.tourn-img {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.tourn-row {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.tourn-btn {
+	margin-right: 10px;
+}
