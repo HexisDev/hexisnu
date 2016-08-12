@@ -1,10 +1,10 @@
 class TournamentsController < ApplicationController
+	before_action :set_tournament, except: [:new, :create, :index]
 	def index
-		@tournaments = Tournament.all
+		redirect_to Tournament.order(name: :asc).first
 	end
 
 	def show
-		@tournament = Tournament.find(params[:id])
 		@tournaments = Tournament.all
 	end
 
@@ -23,12 +23,9 @@ class TournamentsController < ApplicationController
 	end
 
 	def edit
-		@tournament = Tournament.find(params[:id])
 	end
 
 	def update
-		@tournament = Tournament.find(params[:id])
-
 		if @tournament.update(tournament_params)
 			redirect_to @tournament
 		else
@@ -37,14 +34,16 @@ class TournamentsController < ApplicationController
 	end
 
 	def destroy
-		@tournament = Tournament.find(params[:id])
 		@tournament.destroy
 		redirect_to tournaments_path
 	end
 
 	private
+		def set_tournament
+			@tournament = Tournament.find_by(slug: params[:slug])
+		end	
 
-	def tournament_params
-		params.require(:tournament).permit(:name, :description, :game, :team_size, :developer, :image, :rules)
-	end
+		def tournament_params
+			params.require(:tournament).permit(:name, :description, :game, :team_size, :developer, :image, :rules)
+		end
 end

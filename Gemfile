@@ -36,6 +36,8 @@ gem 'stripe'
 gem 'react-rails', '~> 1.0'
 # Google analytics for statistics
 gem 'google-analytics-rails', '1.1.0'
+# make pretty urls
+gem 'friendly_id'
 
 gem 'minitest', '~> 5.8.0'
 gem 'bootstrap-sass', '~> 3.3.5'

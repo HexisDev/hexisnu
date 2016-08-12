@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810160252) do
+ActiveRecord::Schema.define(version: 20160812191907) do
 
   create_table "about", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -113,7 +113,10 @@ ActiveRecord::Schema.define(version: 20160810160252) do
     t.text     "rules",       limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "slug",        limit: 255
   end
+
+  add_index "tournaments", ["slug"], name: "index_tournaments_on_slug", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
