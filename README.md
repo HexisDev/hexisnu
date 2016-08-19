@@ -49,6 +49,11 @@ This needs to be filled the next time we deploy the server
 Environment variables, such as API keys, has to be set in /etc/apache2/envvars otherwise they will not be visible 
 to the rails server
 
+```bash
+bundle exec rake db:migrate RAILS_ENV=production
+```
+Otherwise rake will target develop
+
 ### Let’s encrypt
 In order to setup https for the server we need to install the Let’s encypt client and run it.
 ````bash
