@@ -1,5 +1,7 @@
 class TournamentsController < ApplicationController
 	before_action :set_tournament, except: [:new, :create, :index]
+	before_action :authenticate_user!, except: [:index, :show]
+	
 	def index
 		redirect_to Tournament.order(name: :asc).first
 	end
