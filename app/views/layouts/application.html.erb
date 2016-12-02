@@ -32,16 +32,19 @@
       <div id="navbar" class="collapse navbar-collapse" data-no-turbolink>
         <ul class="nav navbar-nav" data-no-turbolink>
           <%= nav_link 'Hem', "/" %>
-          <%= nav_link 'Nyheter', articles_path %>
           <li class="dropdown">
-            <a href="/about" class="hidden-lg hidden-md">Om Hexis</a>
-            <a href="/about" class="dropdown-toggle hidden-xs hidden-sm">Om Hexis<span class="caret"></span></a>
+            <a href="/about" class="hidden-lg hidden-md">Evenemang</a>
+            <a href="/about" class="dropdown-toggle hidden-xs hidden-sm">Evenemang<span class="caret"></span></a>
             <ul class="dropdown-menu hidden-xs hidden-sm">
-              <li><%= link_to "Om Hexis", "/about#about" %></li>
-              <li><%= link_to "Dreamteam", "/about#dreamteam" %></li>
+              <li><%= link_to "Bakgrund", "/about#background" %></li>
+              <li><%= link_to "Lokalen", "/about#venue" %></li>
+              <li><%= link_to "Packlista", "/about#packing" %></li>
+              <li><%= link_to "Laget bakom", "/about#team" %></li>
             </ul>
           </li>
           <%= nav_link 'Turneringar', tournaments_path %>
+          <%= nav_link 'Nyheter', articles_path %>
+          <%= nav_link 'Deltagarinfo', '/participant' %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <!--li class="vcenter"><a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" href="http://bit.ly/hexis-biljetter"><button class="btn btn-lg btn-primary">Köp biljett</button></a></li-->
