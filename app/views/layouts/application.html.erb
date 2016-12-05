@@ -38,16 +38,23 @@
             <ul class="dropdown-menu hidden-xs hidden-sm">
               <li><%= link_to "Bakgrund", "/about#background" %></li>
               <li><%= link_to "Lokalen", "/about#venue" %></li>
-              <li><%= link_to "Packlista", "/about#packing" %></li>
               <li><%= link_to "Laget bakom", "/about#team" %></li>
             </ul>
           </li>
           <%= nav_link 'Turneringar', tournaments_path %>
-          <%= nav_link 'Nyheter', articles_path %>
-          <%= nav_link 'Deltagarinfo', '/participant' %>
+          <!--%= nav_link 'Nyheter', articles_path %-->
+          <li class="dropdown">
+            <a href="/about" class="hidden-lg hidden-md">Inför Hexis</a>
+            <a href="/about" class="dropdown-toggle hidden-xs hidden-sm">Inför Hexis<span class="caret"></span></a>
+            <ul class="dropdown-menu hidden-xs hidden-sm">
+              <li><%= link_to "Deltagarinfo", "/participant#sovsalar" %></li>
+              <li><%= link_to "För föräldrar", "/participant#parents" %></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <!--li class="vcenter"><a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" href="http://bit.ly/hexis-biljetter"><button class="btn btn-lg btn-primary">Köp biljett</button></a></li-->
+          <li class="vcenter"><a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" 
+              href="http://bit.ly/hexis-biljetter"><button class="btn btn-lg btn-primary">Köp biljett</button></a></li>
           <% unless mobile_device? %>
             <li class="vcenter" style="padding-right: 10px"><%= render 'shared/stripe' %></li>
           <% end %>
