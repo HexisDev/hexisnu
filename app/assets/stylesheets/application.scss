@@ -3,28 +3,25 @@ $brand-primary: #0ca460; //grön
 $navbar-default-link-hover-color: $brand-primary;
 $navbar-default-link-active-color: $brand-primary;
 $grid-float-breakpoint: 1000px;
-
 $body-bg: #ffffff;
 $text-color: #000;
-
 @import "bootstrap";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-
-@font-face{
-  font-family:'Glyphicons Halflings';
-  src: image-url("bootstrap/glyphicons-halflings-regular.eot");
-  src: image-url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
-       image-url("bootstrap/glyphicons-halflings-regular.woff") format("woff"),
-       image-url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"),
-       image-url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: image-url("bootstrap/glyphicons-halflings-regular.eot");
+    src: image-url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), image-url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), image-url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), image-url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
 }
 
+
 /* general styles */
-html, body {
-  font-family: 'Trebuchet MS', tahoma, sans-serif;
-  height: 100%;
-  width: 100%;
+
+html,
+body {
+    font-family: 'Trebuchet MS', tahoma, sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 ::-moz-selection {
@@ -37,26 +34,27 @@ html, body {
     background: $brand-primary;
 }
 
+
 /*********************
 ****** NAVBAR ********
 *********************/
 
 .brand-logo {
-  position: absolute;
-  width: 100%;
-  padding-left: 50%;
-  margin-top: -21px;
-  margin-left: -57px;
+    position: absolute;
+    width: 100%;
+    padding-left: 50%;
+    margin-top: -21px;
+    margin-left: -57px;
 }
 
 .container {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.navbar-nav > li > a {
-  font-size: 200%;
+.navbar-nav>li>a {
+    font-size: 200%;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -64,23 +62,26 @@ html, body {
     margin-top: 0; // remove the gap so it doesn't close
 }
 
+
 /*********************
 *** padded section ***
 *********************/
+
 .pad-section {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 
 .pad-div {
-  display: table;
-  height: 70em;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    display: table;
+    height: 30em;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 
 /*********************
 **** content mod *****
@@ -90,122 +91,142 @@ textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
-input[type="email"]:focus, 
+input[type="email"]:focus,
 input[type="tel"]:focus {
-  border-color: #7d26cd;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7d26cd;
-  outline: 0 none;
+    border-color: #7d26cd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7d26cd;
+    outline: 0 none;
 }
 
 .btn {
-  border-radius: 5em;
+    border-radius: 5em;
 }
 
 .btn-buy {
-  font-size: 30px;
-  padding: 1em 0 1em 0;
-  margin-top: 25px;
+    font-size: 30px;
+    padding: 1em 0 1em 0;
+    margin-top: 25px;
 }
 
 .create-content {
-  padding-top: 100px;
+    padding-top: 100px;
 }
 
+
 /* vertical-centered text */
+
 .text-vcenter {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
-.text-vcenter h1, .text-center h1 {
-  font-size: 3.5em;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
+
+.text-vcenter h1,
+.text-center h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
 
 .vcenter {
-  line-height: 50px;
+    line-height: 50px;
 }
 
 .avatar {
-  background-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+    background-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
 
 p {
-  font-size: 1.5em;
-  color: $gray;
+    font-size: 1.5em;
+    color: $gray;
 }
 
 .alert {
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  z-index: 7000;
-  text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 7000;
+    text-align: center;
 }
 
 .title {
-  padding: 20px 10px;
-  color: $gray-lighter;
-  background-color: $brand-primary;
+    padding: 20px 10px;
+    color: $gray-lighter;
+    background-color: $brand-primary;
 }
+
 
 /*********************
 ******* Countdown ****
 *********************/
 
 .countdown {
-  color: $gray;
-  font-size: 3.5em;
+    color: $gray;
+    font-size: 3.5em;
 }
+
 
 /*********************
 ******* footer *******
 *********************/
 
-.footer{
-  padding: 0;
-  a {
-    padding-bottom: 2em;
-    margin: 0.5em;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  img {
-    height: 3em;
-    margin-top: -0.9em;
-    margin-left: -2.6em;
-  }
+.footer {
+    padding: 0;
+    a {
+        padding-bottom: 2em;
+        margin: 0.5em;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    img {
+        height: 3em;
+        margin-top: -0.9em;
+        margin-left: -2.6em;
+    }
 }
 
-.footer-hr{
-  width: 100%;
+.footer-hr {
+    width: 100%;
 }
 
 .footer-link {
-  float: right;
+    float: right;
 }
+
 
 /*********************
 ******* Sponsors *******
 *********************/
 
 .sponsor-image {
-  max-height: 150px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  display: inline-block;
+    max-height: 150px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
 }
+
 
 /*********************
 ******* Fix *******
 *********************/
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.spoiler-btn {
+    cursor: pointer;
+}
+
+.spoiler-btn>.glyphicon {
+    font-size: 16px;
+}
+
+.spoiler-btn:hover {
+    color: $brand-primary;
 }
