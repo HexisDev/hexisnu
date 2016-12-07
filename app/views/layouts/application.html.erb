@@ -2,6 +2,10 @@
 <html>
 <head>
   <title><%= yield(:title).empty? ? "Hexis" : yield(:title) %></title>
+  <meta property="og:title" content="<%= yield(:og_title).empty? ? "Hexis" : yield(:og_title) %>" />
+  <meta property="og:type" content="<%= yield(:og_type).empty? ? "website" : yield(:og_type) %>" />
+  <meta property="og:url" content="<%= yield(:og_url).empty? ? "http://hexis.nu" : yield(:og_url) %>" />
+  <meta property="og:image" content="<%= yield(:og_image).empty? ? asset_path("hexis_logo.png") : yield(:og_image) %>" />
   <link rel="shortcut icon" href="<%= asset_path('hexis_logo.png')%>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag params[:controller]%>
