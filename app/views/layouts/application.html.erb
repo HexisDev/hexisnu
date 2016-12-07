@@ -42,7 +42,7 @@
               <li><%= link_to "Bakgrund", "/about#background" %></li>
             </ul>
           </li>
-          <%= nav_link 'Turneringar', tournaments_path %>
+          <%= nav_link 'Aktiviteter', tournaments_path %>
           <!--%= nav_link 'Nyheter', articles_path %-->
           <li class="dropdown">
             <a href="/participant" class="hidden-lg hidden-md">Inför Hexis</a>
@@ -54,8 +54,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="vcenter"><a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" 
-              href="http://bit.ly/hexis-biljetter"><button class="btn btn-lg btn-primary">Köp biljett</button></a></li>
+          <!--li class="vcenter"><a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" 
+              href="http://bit.ly/hexis-biljetter"><button class="btn btn-lg btn-primary">Köp biljett</button></a></li-->
           <% unless mobile_device? %>
             <li class="vcenter" style="padding-right: 10px"><%= render 'shared/stripe' %></li>
           <% end %>
