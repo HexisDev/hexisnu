@@ -1,5 +1,3 @@
-<% content_for :title do "Nyheter" end %>
-
 <% @articles.order(created_at: :desc).each do |article| %>
 	<%= render article %>
 <% end %>
