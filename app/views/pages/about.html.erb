@@ -7,7 +7,7 @@
         EVENEMANG
 -->
 
-<div class="pad-div" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(<%= asset_path 'bg_main.jpg' %>) center center fixed" >
+<div class="pad-div" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(<%= asset_path 'bgs/bg_main.jpg' %>) center center fixed" >
   <%= image_tag 'hexis_text.png', :width => "80%", :style => "padding-top: 100px; margin: 0 auto", :class => "img-responsive"%>
 </div>
 
@@ -49,7 +49,9 @@
         inte gillar sovsalar.
        Fler bilder på arenan finns <a href="http://prioritetsernekearena.se/bildbank">här</a>
       </p>
-      <%= video_tag "serneke.mp4", :width => "100%", :height => "100%" ,:controls => true %>
+      <div class="embed-responsive embed-responsive-16by9 col-xs-12 text-center">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2TGH6gwm5Ok" frameborder="0" align="center" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </div>
