@@ -1,0 +1,3 @@
+<% unless @articles.first.nil? %>
+  <%= render @articles.order(created_at: :desc).first %>
+<%end %>

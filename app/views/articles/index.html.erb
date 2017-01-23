@@ -1,3 +1,7 @@
+<%= content_for :title do "Nyheter" end %>
+<%= content_for :og_title do "Hexis nyheter" end %>=
+<%= content_for :og_url do "hexis.nu/articles" end %>
+<%= content_for :og_desc do "Alla nyheter kring Hexis, även artiklar" end %>
 <% @articles.order(created_at: :desc).each do |article| %>
 	<%= render article %>
 <% end %>

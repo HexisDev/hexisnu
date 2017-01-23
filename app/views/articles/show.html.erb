@@ -1,1 +1,5 @@
+<%= content_for :title do @article.title end %>
+<%= content_for :og_title do @article.title end %>=
+<%= content_for :og_url do article_path(@article) end %>
+<%= content_for :og_desc do @article.text.split(".")[0] end %>
 <%= render @article %>

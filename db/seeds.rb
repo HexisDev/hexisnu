@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+a = Date.new(2017-01-21)
+Article.create(title: "hejsan", text: "AOEUAe uaoeu aoeu eu aou aoe uau aoeu aoe u",
+    created_at: a)
+Article.create(title: "Rocket League turnering", text: "Hexis anordnar en 2v2 rocket league turnering!")
