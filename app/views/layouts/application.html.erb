@@ -8,6 +8,7 @@
   <meta property="og:image" content="<%= yield(:og_image).empty? ? asset_path("hexis_logo.png") : yield(:og_image) %>" />
   <meta property="og:description" content="<%= yield(:og_desc).empty? ? "Det nya schyssta spelarrangemanget" : yield(:og_desc) %>">
   <meta property="og:site_name" content="Hexis">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="<%= asset_path('hexis_logo.png')%>">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag params[:controller]%>
