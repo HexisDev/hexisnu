@@ -11,8 +11,21 @@
   //-moz-border-radius: 2em;
 }
 
-.date {
-  font-size: 4em;
+.front {
+  font-size: 2em;
   color: white;
   text-shadow: 2px 2px 6px black;
+}
+
+.scroll.front {
+  margin-top: 3em;
+}
+
+.date.front {
+  font-size: 4em;
+}
+
+.latest {
+  margin-top: 25em;
+  margin-bottom: 10px;
 }
