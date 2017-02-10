@@ -19,6 +19,7 @@ class TablesController < ApplicationController
 
   def create
     @table = Table.new(table_params)
+    @tables = Table.all
 
     if @table.save
       render 'index'
