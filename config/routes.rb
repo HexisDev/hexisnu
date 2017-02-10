@@ -16,12 +16,18 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :tables 
+
   resources :events do
     resources :seatmaps do
       resources :rows
     end
   end
 
+  get "tickets" => "tables#index"
+  get "tickets/new" => "tables#new"
+  get "tickets/:id" => "tables#show"
+  get "tickets/:id/edit" => "tables#edit"
   get "/" => "home#index"
   get "admin" => "admin#index"
   get ":page" => "pages#show"
