@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210130322) do
+ActiveRecord::Schema.define(version: 20170211150005) do
 
   create_table "about", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -96,7 +96,10 @@ ActiveRecord::Schema.define(version: 20170210130322) do
     t.integer  "booked",     limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.boolean  "blocked",    limit: 1
   end
+
+  add_index "tables", ["blocked"], name: "index_tables_on_blocked", using: :btree
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "price",       limit: 4

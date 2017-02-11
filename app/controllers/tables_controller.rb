@@ -46,7 +46,7 @@ class TablesController < ApplicationController
 
   private
     def table_params
-      params.require(:table).permit(:seats, :booked)
+      params.require(:table).permit(:seats, :booked, :blocked)
     end
 
     def set_tables

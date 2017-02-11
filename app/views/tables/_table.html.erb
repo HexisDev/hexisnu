@@ -1,6 +1,11 @@
 <div class="progress progress-bar-vertical">
-    <div class="progress-bar" role="progressbar" aria-valuenow="<%= table.booked %>" 
-            aria-valuemin="0" aria-valuemax="<%= table.seats %>" style="height: <%= height(table) %>%;">
-        <span><%= table.booked %>/<%= table.seats %></span>
+    <div class="progress-bar <%= table.seats == table.booked ? 'progress-bar-danger' : '' %>" role="progressbar" aria-valuenow="<%= table.booked %>" 
+            aria-valuemin="0" aria-valuemax="<%= table.seats %>" 
+            style="height: <%= height(table) %>%; <%= table.blocked ? 'background-image: none; background-color: gray' : ''%>">
+        <span>
+            <% unless table.blocked %>
+                <%= table.booked %>/<%= table.seats %>
+            <% end %>
+        </span>
     </div>
 </div>
