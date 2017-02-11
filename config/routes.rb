@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :tables 
+  resources :tables, :path => "tickets"
 
   resources :events do
     resources :seatmaps do
@@ -24,10 +24,10 @@ Rails.application.routes.draw do
     end
   end
 
-  get "tickets" => "tables#index"
-  get "tickets/new" => "tables#new"
-  get "tickets/:id" => "tables#show"
-  get "tickets/:id/edit" => "tables#edit"
+  #get "tickets" => "tables#index"
+  #get "tickets/new" => "tables#new"
+  #get "tickets/:id" => "tables#show"
+  #get "tickets/:id/edit" => "tables#edit"
   get "/" => "home#index"
   get "admin" => "admin#index"
   get ":page" => "pages#show"
