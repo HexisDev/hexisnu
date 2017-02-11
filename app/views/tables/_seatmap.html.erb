@@ -1,22 +1,38 @@
+<div class="pad-div", style="background: url(<%= asset_path 'lan1.jpg' %>) 
+	no-repeat center center fixed"></div>
 
 <div class="pad-section title">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
 	  	<div class="text-vcenter">
-				<h1>
-                    Platskarta
-				</h1>
+				<h1>Platskarta</h1>
 			</div>
 		</div>
 	</div>
 </div>
 
 <div class="pad-section">
-  <div class="row">
+	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 col-lg-6 col-lg-offset-3">
-			<% @tables.each do |table| %>
-                <%= render table %>
-            <% end %>
+			<% @tables.each_slice(8) do |row| %>
+				<div class="row">
+					<% row.each_slice(4) do |slice| %>
+						<div class="col-xs-4 col-xs-2">
+							<% slice.each do |table| %>
+								<%= render table %>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+			<% if user_signed_in? && current_user.admin? %>
+				<% @tables.each do |table| %>
+					<%= link_to "Destroy #{table.id}", table_path(table), method: :delete, data: {confirm: "Are you sure?"} %>
+					<%= link_to "Edit #{table.id}", edit_table_path(table) %>
+					<%= link_to "Show #{table.id}", table_path(table) %>
+					<br>
+				<% end %>
+			<% end %>
 		</div>
 	</div>
 </div>
