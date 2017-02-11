@@ -1,6 +1,6 @@
 <div class="progress progress-bar-vertical">
     <div class="progress-bar" role="progressbar" aria-valuenow="<%= table.booked %>" 
             aria-valuemin="0" aria-valuemax="<%= table.seats %>" style="height: <%= height(table) %>%;">
-        <span class="sr-only"><%= height(table) %>% Complete</span>
+        <span class="vertical"><%= table.booked %>/<%= table.seats %></span>
     </div>
 </div>

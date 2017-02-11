@@ -1,2 +1,13 @@
-<%= @table.seats %>
-<%= @table.booked %>
+<div class="row create-content">
+    <div class="col-xs-10 col-xs-offset-1">
+        <%= render @table %>
+        Total seats: <%= @table.seats %><br>
+        Booked seats: <%= @table.booked %><br>
+        <%= link_to "Platskarta", tables_path() %>
+        <% if user_signed_in? && current_user.admin? %>
+            <%= link_to "Destroy", table_path(@table), method: :delete, data: {confirm: "Are you sure?"} %>
+            <%= link_to "Edit", edit_table_path(@table) %>
+            <%= link_to "Show", table_path(@table) %>
+        <% end %>
+    </div>
+</div>

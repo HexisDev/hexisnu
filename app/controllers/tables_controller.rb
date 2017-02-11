@@ -1,8 +1,9 @@
 class TablesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :set_tables
 
   def index
-    @tables = Table.all
+    
   end
 
   def new
@@ -19,10 +20,9 @@ class TablesController < ApplicationController
 
   def create
     @table = Table.new(table_params)
-    @tables = Table.all
 
     if @table.save
-      render 'index'
+      redirect_to @table
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class TablesController < ApplicationController
     @table = Table.find(params[:id])
 
     if @table.update(table_params)
-      render 'index'
+      redirect_to @table
     else
       render 'edit'
     end
@@ -41,11 +41,15 @@ class TablesController < ApplicationController
   def destroy
     @table = Table.find(params[:id])
     @table.destroy
-    render 'index'
+    redirect_to tables_path
   end
 
   private
     def table_params
       params.require(:table).permit(:seats, :booked)
+    end
+
+    def set_tables
+      @tables = Table.all
     end
 end
