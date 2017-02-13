@@ -35,6 +35,8 @@
 					</div>
 				</div>
 			<% end %>
+			<a style="padding: 2px; padding-right: 10px; padding-left: 10px" class="buy-button" 
+              href="https://kippu.events/e/hexis"><button class="btn btn-lg btn-primary">Köp nu</button></a>
 			<% if user_signed_in? && current_user.admin? %>
 				<% @tables.each do |table| %>
 					<%= link_to "Destroy #{table.id}", table_path(table), method: :delete, data: {confirm: "Are you sure?"} %>
