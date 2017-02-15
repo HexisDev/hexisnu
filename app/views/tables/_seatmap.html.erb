@@ -15,7 +15,6 @@
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 col-lg-offset-3">
 			<p>Här kan man se hur många platser som är bokade på varje bord</p>
-			<p>Just nu är det <b><%= tickets_booked() %></b> biljetter bokade</p>
 			<% @tables.each_slice(10) do |row| %>
 				<div class="row">
 					<div >
