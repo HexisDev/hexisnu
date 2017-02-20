@@ -1,10 +1,24 @@
 <div class="pad-div", style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(<%= asset_path 'bgs/1M6A1301.jpg' %>) no-repeat center center fixed"></div>
 
+<% sponsors = Sponsor.all.to_a %>
+<div class="pad-section">
+  <h1 class="text-center">Huvudsponsor</h1><br>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 text-center">
+        <% first = sponsors.shift %>
+        <% unless first.link == "" %>
+        	<a href="<%= first.link %>">
+        <% end %>
+        <%= image_tag first.logo, :class => "sponsor-image" %></a>
+
+    </div>
+  </div>
+</div>
 <div class="pad-section">
   <h1 class="text-center">Samarbeten</h1><br>
   <div class="row">
     <div class="col-xs-offset-1 col-xs-10 text-center">
-      <% Sponsor.all.each do |sponsor| %>
+      <% sponsors.each do |sponsor| %>
         <% unless sponsor.link == "" %>
         	<a href="<%= sponsor.link %>">
         <% end %>
