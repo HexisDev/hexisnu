@@ -8,13 +8,6 @@
   float: left;
 }
 
-@media (max-width: 810px){
-  .progress-bar-vertical {
-    width: 25px;
-    margin-right: 5px;
-  }
-}
-
 .progress-bar-vertical .progress-bar {
   width: 100%;
   height: 0;
@@ -34,4 +27,54 @@
   position: relative;
   float: left;
   padding-left: 15px;
+}
+
+.map-object {
+  width: 200px;
+  background-color: #0ca460; 
+  height: 32px;
+  margin-left: 14px;
+  margin-bottom: 10px;
+}
+
+.map-object p {
+  color: #fff;
+}
+
+.table-name {
+  margin-right: 15px;
+  display: inline;
+}
+
+.table-name p {
+  display: inline;
+  margin-left: 11px;
+  margin-right: 21px;
+}
+
+@media (max-width: 810px){
+  .progress-bar-vertical {
+    width: 25px;
+    margin-right: 5px;
+  }
+
+  .map-object {
+    width: 85px;
+    height: 25px;
+  }
+
+  .map-object p {
+    font-size: 16px;
+  }
+
+  .table-name {
+    margin-right: 12px;
+  }
+
+  .table-name p {
+    margin-left: 6px;
+    margin-right: 7px;
+    font-size: 12px;
+  }
+
 }
