@@ -230,3 +230,21 @@ p {
 .spoiler-btn:hover {
     color: $brand-primary;
 }
+
+.message {
+    height: 30px;
+    background-color: #0ca460;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.message p {
+    color: #eee;
+}
+
+.message a {
+    color: #fff;
+    font-weight: 700;
+}
