@@ -49,17 +49,15 @@ var Countdown = React.createClass({
     stt = this.state;
     days = this.format(stt.daysLeft);
     if(this.state.currentTime > this.state.end){
-      out = 'Event slut';
+      out = 'Hexis slut :(';
     } else if (this.state.currentTime > this.state.start) {
-      out = 'Pågående!';
+      out = 'Let the party begin!';
     } else {
       out = this.format(stt.daysLeft) + ":" + this.format(stt.hoursLeft) + ":" +
       this.format(stt.minutesLeft) + ":" + this.format(stt.secondsLeft);
     }
     return (
-      <div>
-        <h1 className="countdown">{out}</h1>
-      </div>
+      <h2 className="col-lg-4 col-lg-offset-4 col-xs-10 col-xs-offset-1 front date">{out}</h2>
     );
   }
 });
