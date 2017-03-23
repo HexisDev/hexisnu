@@ -1,7 +1,7 @@
 <%= render 'header' %>
 <%= render @tournament %>
 
-<div class="pad-div", style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(http://www.prioritetsernekearena.se/assets/new-site/img/PrioritetSernekeArena_bild_original.jpg) no-repeat center center fixed">
+<div class="pad-div", style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),url(<%= asset_path 'serneke3.jpg' %>) no-repeat center center fixed">
 </div>
 
 <div class="pad-section title">
@@ -20,6 +20,7 @@
             <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#activity">Aktivitetsområde</a></li>
             <li><a data-toggle="tab" href="#artemis">Artemis</a></li>
+            <li><a data-toggle="tab" href="#paint">Paint</a></li>
             </ul>
 
             <div class="tab-content">
@@ -38,6 +39,22 @@
                         Artemis är en intensiv rymdskeppssimulator där du och dina vänner tillsammans kontrollerar ett fullfjädrat skepp 
                         i den stora rymden. Någon håller koll på sköldarna, någon annan kanonerna, en tredje sitter med styrspakarna. 
                         Spelet handlar om att kunna sammarbeta och kommunicera(skrika). läs mer om Artemis <a href="http://artemis.eochu.com/">här</a> 
+                    </p>
+                </div>
+                <div id="paint" class="tab-pane fade">
+                    <h3>Paint tävling</h3>
+                    <p>
+                        Visa dina kreativa skills i en tävling där allt är tillåtet, bara det utförs i programmet MS Paint. 
+                        Priset är en magnifik Bob Ross t-shirt. Borsta av penseln och börja skapa lyckliga små misstag.
+                        Mer info om tävlingen kommer ni få på evenemanget.  
+                    </p>
+                </div>
+                <div id="achtung" class="tab-pane fade">
+                    <h3>Achtung, die Kurve!</h3>
+                    <p>
+                        Visa dina kreativa skills i en tävling där allt är tillåtet, bara det utförs i programmet MS Paint. 
+                        Priset är en magnifik Bob Ross t-shirt. Borsta av penseln och börja skapa lyckliga små misstag.
+                        Mer info om tävlingen kommer ni få på evenemanget.  
                     </p>
                 </div>
             </div>
